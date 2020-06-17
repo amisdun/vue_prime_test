@@ -17,11 +17,9 @@ import PanelMenu from 'primevue/panelmenu'
 import Accordion from 'primevue/accordion';
 import AccordionTab from 'primevue/accordiontab';
 import VueSession from 'vue-session'
-import Axios from 'axios'
 import Message from 'primevue/message'
 
 Vue.use(VueSession)
-Vue.use(Axios)
 Vue.component('Message', Message)
 Vue.component('Accordion',Accordion)
 Vue.component('AccordionTab', AccordionTab)
