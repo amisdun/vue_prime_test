@@ -34,9 +34,9 @@ Vue.use(VueRouter)
 
 let router = new VueRouter({
   routes: [
-    {path: '/', name: 'SignUp', component: SignUp},
+    {path: '/SignUp', name: 'SignUp', component: SignUp},
     {path: '/SignIn', name: 'SignIn', component: SignIn},
-    {path: '/UserDashboard', name: 'UserDashboard', component: UserDashboard}
+    {path: '/', name: 'UserDashboard', component: UserDashboard}
   ],
   mode: 'history'
 })

@@ -61,9 +61,9 @@ export default {
     }
   },
   beforeCreate(){
-    if(!this.$session.exists()){
-      this.$router.push({name: 'SignIn'})
-    }
+    // if(!this.$session.exists()){
+    //   this.$router.push({name: 'SignIn'})
+    // }
   },
   created(){
     let token = this.$session.get('user_token')

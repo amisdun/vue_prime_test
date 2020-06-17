@@ -150,7 +150,6 @@ export default {
           terms_and_policy: terms_and_condition
         }
       }
-      console.log("hello")
       try {
         let account_res = await axios({url: 'https://api-staging.veryfy.net/auth/signup', data: data, dataType: 'JSON',method: 'POST'})
 
