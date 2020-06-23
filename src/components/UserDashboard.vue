@@ -40,7 +40,7 @@ export default {
   data(){
     return {
       visibleLeft: true,
-      user_token: null
+      user_token: "Token"
     }
   },
   methods: {

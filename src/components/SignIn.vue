@@ -92,12 +92,13 @@ export default {
 
       try {
         let login_user_response = await axios({url: 'https://api-staging.veryfy.net/auth/login', dataType: 'JSON', method: 'POST', data: data})
-
-        if(login_user_response.status === 200){
+        let {headers,status} = login_user_response
+        let user_token = headers.authorization.slice(6,)
+        if(status === 204){
           this.loading = false
           this.$session.start()
-          this.$session.set('user_token', login_user_response.data.token)
-          this.$router.push({name: 'SignIn'})
+          this.$session.set('user_token', user_token)
+          this.$router.push({name: 'UserDashboard'})
         }
       } catch(e) {
           if(e.response.status === 401){

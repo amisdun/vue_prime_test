@@ -19,6 +19,7 @@ import AccordionTab from 'primevue/accordiontab';
 import VueSession from 'vue-session'
 import Message from 'primevue/message'
 
+
 Vue.use(VueSession)
 Vue.component('Message', Message)
 Vue.component('Accordion',Accordion)
@@ -32,14 +33,16 @@ Vue.component('Button', Button)
 Vue.component('PanelMenu', PanelMenu)
 Vue.use(VueRouter)
 
+
 let router = new VueRouter({
   routes: [
-    {path: '/SignUp', name: 'SignUp', component: SignUp},
+    {path: '/', name: 'SignUp', component: SignUp},
     {path: '/SignIn', name: 'SignIn', component: SignIn},
-    {path: '/', name: 'UserDashboard', component: UserDashboard}
+    {path: '/UserDashboard', name: 'UserDashboard', component: UserDashboard}
   ],
   mode: 'history'
 })
+
 
 Vue.config.productionTip = false
 
