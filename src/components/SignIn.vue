@@ -94,6 +94,7 @@ export default {
         let login_user_response = await axios({url: 'https://api-staging.veryfy.net/auth/login', dataType: 'JSON', method: 'POST', data: data})
         let {headers,status} = login_user_response
         let user_token = headers.authorization.slice(6,)
+        console.log(user_token)
         if(status === 204){
           this.loading = false
           this.$session.start()
